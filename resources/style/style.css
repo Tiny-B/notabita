@@ -25,12 +25,63 @@ img {
   object-fit: cover;
 }
 
+span {
+  color: rgb(163, 113, 255)
+}
+
+h1 {
+  font-weight: bold;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.vert-divider {
+  width: 3px;
+  height: 90%;
+  background-color: rgb(163, 113, 255);
+}
+
+.hor-divider {
+  width: 90%;
+  height: 3px;
+  background-color: rgb(163, 113, 255);
+}
+
+/* navbar */
+.nav-btn {
+  background-color: var(--background-color);
+  padding: 10px;
+  width: 150px;
+}
+
+.offcanvas {
+  width: 300px !important;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+}
+
+.nav-btn:hover {
+  color: rgb(163, 113, 255);
+  border: 1px solid  rgb(163, 113, 255);
+}
+
+.nav-link {
+  color: white !important;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgb(163, 113, 255);
+}
+
+a:hover {
+  color: rgb(163, 113, 255) !important;
+}
+
+/* banner */
 .banner {
   margin-top: 50px;
   width: 100%;
@@ -52,10 +103,60 @@ img {
   background-color: rgb(32, 32, 32);
   font-size: 1.3rem;
   font-weight: bold;
-  margin: 20px
+  margin: 20px;
 }
 
 .banner-item {
   width: 100%;
   height: 100%;
+}
+
+/* feature list section */
+.feature-list {
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+}
+
+.feature-list-item {
+  width: 40%;
+  flex-direction: column;
+}
+
+/* Try out section */
+.try-out {
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: rgb(130, 62, 255);
+  width: 100%;
+  height: 250px;
+  border-top: 5px solid rgb(163, 113, 255);
+  border-bottom: 5px solid rgb(163, 113, 255);
+}
+
+.try-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+}
+
+.try-btn:hover {
+  color: rgb(184, 0, 61);
+  border: 5px solid rgb(184, 0, 61);
+  /* box-shadow: 5px 5px; */
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(33, 37, 41);
+  border-top: 3px solid rgb(163, 113, 255)
+}
+
+footer p {
+  margin: 0;
 }

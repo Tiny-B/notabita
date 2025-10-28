@@ -17,11 +17,14 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">Notabita</a>
-          
+          <a class="navbar-brand" href="#"><span>N</span>otabit<span>a</span></a>
+          <div>
+            <button class="nav-btn">SignUp</button>
+            <button class="nav-btn">Login</button>
+          </div>
           <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Site Links</h5>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -69,18 +72,19 @@
     </header>
 
     <main class="flex-container">
-      <hgroup>
+      <div>
         <h1>A notes app you can rely on</h1>
-        <h3>Work smarter, not harder</h3>
-      </hgroup>
+        <div class="hor-divider"></div>
+        <h3>Work <span>smarter</span>, not harder</h3>
+      </div>
 
       <section class="banner flex-container">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="flex-container banner-item">
                 <div class="banner-txt-container flex-container">
-                  <p class="banner-txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi hic necessitatibus incidunt dolorum autem temporibus cupiditate, magnam praesentium tenetur.</p>
+                  <p class="banner-txt">Take your work anywhere with our online text editor, download or upload text files for full <span>flexibility.</span> Keep all your notes in one place or move them else where at the touch of a button.</p>
                 </div>
                 <div>
                   <img src="./resources/image/man-593333_1280.jpg" class="d-block w-100"  alt="...">
@@ -93,7 +97,7 @@
                   <img src="./resources/image/programming-1857236_1280.jpg" class="d-block w-100"  alt="...">
                 </div>
                 <div class="banner-txt-container">
-                  <p class="banner-txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi hic necessitatibus incidunt dolorum autem temporibus cupiditate, magnam praesentium tenetur.</p>
+                  <p class="banner-txt">Work smarter with our integrated <span>AI assistant</span>, able to answer questions and talk about your text file, can't remember a statistic you wrote earlier, ask Nota, need to know a historical fact, no need to open a new tab and go else where, just ask Nota, right from the editor.</p>
                 </div>
               </div>
             </div>
@@ -101,10 +105,43 @@
           </div>
         </div>
       </section>
+
+      <section class="feature-list flex-container">
+        <div class="feature-list-item flex-container">
+          <h3>A few features.</h3>
+          <ul>
+            <li>Download or upload text files</li>
+            <li>Use the AI assistant to help with your work</li>
+            <li>Store, edit and delete notes</li>
+            <li>Add images and tables when needed</li>
+            <li>Features you would expect from a text editor app</li>
+          </ul>
+        </div>
+        <div class="vert-divider"></div>
+        <div class="feature-list-item flex-container">
+          <hgroup><h2>What can you do with this?</h2></hgroup>
+          <ul>
+            <li>Take notes or write documents</li>
+            <li>Have the AI assistant work with you side by side</li>
+            <li>Create documents and have the AI assistant review them for you</li>
+            <li>Have the AI assistant summarize your document</li>
+            <li>Whatever you want</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="try-out flex-container">
+        <hgroup>
+          <h3>Try it out here !</h3>
+          <p>Some feature will be locked but feel free to check the editor out.</p>
+          <p>Click the button to open the editor in a new window.</p>
+        </hgroup>
+        <button class="try-btn">Free Trial</button>
+      </section>
     </main>
 
-    <footer>
-
+    <footer class="flex-container">
+      <p>© copyright <span>Eri</span> 2025</p>
     </footer>
     <link href="./resources/script/index.js">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

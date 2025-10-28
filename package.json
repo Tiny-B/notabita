@@ -1,0 +1,22 @@
+{
+	"name": "notabita",
+	"version": "1.0.0",
+	"description": "note taking app",
+	"main": "index.js",
+	"scripts": {
+		"test": "node ./resources/script/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tiny-B/notabita.git"
+	},
+	"keywords": [
+		"note"
+	],
+	"author": "Eri",
+	"license": "UNLICENSED",
+	"bugs": {
+		"url": "https://github.com/Tiny-B/notabita/issues"
+	},
+	"homepage": "https://github.com/Tiny-B/notabita#readme"
+}

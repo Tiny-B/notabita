@@ -15,3 +15,5 @@
 // theme selector
 // header and footer
 // stats display, word count etc
+
+console.info('Hi there');
