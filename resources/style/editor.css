@@ -45,3 +45,12 @@ body {
 	height: 90%;
 	background-color: rgb(48, 48, 48);
 }
+
+.page-content {
+  width: 95%;
+  height: 95%;
+  background-color: rgb(48, 48, 48);
+  border: none;
+  resize: none;
+  outline: none;
+}
