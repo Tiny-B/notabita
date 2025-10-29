@@ -37,7 +37,7 @@ body {
 	width: 95%;
 	height: 5%;
 	background-color: rgb(48, 48, 48);
-	border-bottom: 3px solid rgb(130, 62, 255);
+	border: 3px solid rgb(130, 62, 255);
 }
 
 .page {
@@ -53,4 +53,15 @@ body {
   border: none;
   resize: none;
   outline: none;
+}
+
+/* Controls */
+.text-align-btns {
+
+}
+
+.text-align-btns button {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(143, 143, 143);
 }

@@ -84,12 +84,16 @@
 
       <section>
         <div class="editor-container flex-container">
-          <div class="controls">
-
+          <div class="controls flex-container">
+            <div class="text-align-btns">
+              <button id="left-align">L</button>
+              <button id="center-align">C</button>
+              <button id="right-align">R</button>
+            </div>
           </div>
-          
+
           <div class="page flex-container">
-            <textarea class="page-content" spellcheck="true" autocomplete="off" autofocus="true"></textarea>
+            <textarea id="content" class="page-content" spellcheck="true" autocomplete="off" autofocus="true">Write your document here...</textarea>
           </div>
         </div>
       </section>
@@ -98,7 +102,7 @@
 		<footer class="flex-container">
       <p>© copyright <span>Eri</span> 2025</p>
     </footer>
-    <link href="./resources/script/editor.js">
+    <script src="../script/editor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 	</body>
 </html>
