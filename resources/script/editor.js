@@ -6,29 +6,34 @@ const rightAlignBtn = textAlignBtns[2];
 
 const content = document.getElementById('content');
 
-let selectedText = '';
+const alignText = tag => {
+	const selectedText = window.getSelection();
+	if (selectedText.isCollapsed) return; // nothing being selected
 
-// Text selection
-const selectText = () => {
-	const start = content.selectionStart;
-	const end = content.selectionEnd;
+	// Create a container that will hold the selected text
+	const container = document.createElement('div');
+	container.style.textAlign = tag;
 
-	selectedText = content.textContent.slice(start, end);
-	console.log(selectedText);
-};
+	// Pull the selected contents out of the DOM
+	const range = selectedText.getRangeAt(0);
 
-content.addEventListener('mouseup', selectText);
-
-// Aligning text
-const alignText = (tag = '') => {
-	if (tag == '') {
-	} else if (tag == 'left') {
-		content.style.textAlign = 'left';
-	} else if (tag == 'center') {
-		content.style.textAlign = 'center';
-	} else if (tag == 'right') {
-		content.style.textAlign = 'right';
+	// Check if text selected is text we allow to be edited
+	const is_editable_text = content.contains(range.commonAncestorContainer);
+	if (!is_editable_text) {
+		console.error('Selection is not within the content window');
+		return;
 	}
+
+	container.appendChild(range.extractContents());
+
+	// Insert the new container back where the range used to be
+	range.insertNode(container);
+
+	// reselect the text
+	selectedText.removeAllRanges();
+	const newRange = document.createRange();
+	newRange.selectNodeContents(container);
+	selectedText.addRange(newRange);
 };
 
 leftAlignBtn.onclick = function () {
