@@ -4,14 +4,25 @@ const leftAlignBtn = textAlignBtns[0];
 const centerAlignBtn = textAlignBtns[1];
 const rightAlignBtn = textAlignBtns[2];
 
+console.log('textAlignBtns:', textAlignBtns);
+console.log('leftAlignBtn:', leftAlignBtn);
+
+const fontStyleBtns =
+	document.getElementsByClassName('font-style-btns')[0].children;
+const boldBtn = fontStyleBtns[0];
+const italicBtn = fontStyleBtns[1];
+const underlineBtn = fontStyleBtns[2];
+
 const content = document.getElementById('content');
 
 const formatText = tag => {
 	const selectedText = window.getSelection();
 	if (selectedText.isCollapsed) return; // nothing being selected
+	console.log('selectedText:', selectedText);
 
 	// Create a container that will hold the selected text
 	const container = document.createElement('div');
+	//container.style.display = 'inline-block';
 
 	// Determine what kind of formatting we need
 	switch (tag) {
@@ -24,7 +35,18 @@ const formatText = tag => {
 		case 'right':
 			container.style.textAlign = tag;
 			break;
+		case 'bold':
+			container.style.fontWeight = 'bolder';
+			break;
+		case 'italic':
+			container.style.fontStyle = 'italic';
+			break;
+		case 'underline':
+			container.style.textDecoration = 'underline';
+			break;
 	}
+	console.log('tag:', tag);
+	console.log('container:', container);
 
 	// Pull the selected contents out of the DOM
 	const range = selectedText.getRangeAt(0);
@@ -56,4 +78,14 @@ centerAlignBtn.onclick = function () {
 };
 rightAlignBtn.onclick = function () {
 	formatText('right');
+};
+
+boldBtn.onclick = function () {
+	formatText('bold');
+};
+italicBtn.onclick = function () {
+	formatText('italic');
+};
+underlineBtn.onclick = function () {
+	formatText('underline');
 };

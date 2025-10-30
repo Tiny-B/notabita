@@ -56,11 +56,11 @@ body {
 }
 
 /* Controls */
-.text-align-btns {
-
+.controls {
+  justify-content: space-around;
 }
 
-.text-align-btns button {
+.text-align-btns button, .font-style-btns button {
   width: 30px;
   height: 30px;
   background-color: rgb(143, 143, 143);
